@@ -1,0 +1,238 @@
+/* Contenedor principal que alinea los elementos horizontalmente */
+.main-container {
+  display: flex;
+  justify-content: space-around; /* Espacio uniforme entre los componentes */
+  align-items: flex-start; /* Alinea los elementos a la parte superior */
+  padding: 20px;
+  gap: 20px; /* Espacio entre los componentes */
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente fila si no caben */
+}
+
+/* Estilos generales para la tarjeta */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 185%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 10px rgba(211, 16, 16, 0.1);
+  background-color: rgb(90, 18, 18);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  background-color: #f0f0f0;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+  
+  
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo del contenido de la tarjeta */
+.content h3 {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+/* Estilos para la Newsletter */
+.newsletter-container {
+  border: 2px solid black;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 10px 10px 0 black;
+}
+
+.newsletter-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.newsletter-container p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.newsletter-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.newsletter-button:hover {
+  background-color: #333;
+}
+
+/* Estilos HOVER ME */
+.HOVERS {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 230px;
+  height:100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 10px rgba(197, 5, 5, 0.1);
+}
+
+.hover-button {
+  width: 230px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hover-button:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+/* ========== Media Queries para hacer el diseño responsive ========== */
+
+/* Para pantallas pequeñas, como móviles (menos de 768px) */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Los componentes se apilan verticalmente */
+    align-items: center; /* Centra los componentes */
+  }
+
+  .card, .newsletter-container, .HOVERS {
+    width: 90%; /* Los componentes ocupan casi todo el ancho de la pantalla */
+    margin-bottom: 20px; /* Añade espacio entre los componentes verticalmente */
+  }
+}
+
+
+
+
+/*TAILWIND CARD*/
+/* Estilos generales para la tarjeta */
+.tailwind-card  {
+  background-color: rgb(208, 167, 167);
+  border-radius: 15px;
+  box-shadow: 0px -10px 0px 25px rgba(148, 71, 4, 0.897),
+              0px 20px 0px 25px rgba(148, 71, 4, 0.897),
+              2px 20px 0px 25px rgba(148, 71, 4, 0.897),
+              2px -10px 0px 25px rgba(148, 71, 4, 0.897);
+  width: 300px;
+  
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  position: relative;
+}
+
+/* Contenedor de la imagen */
+
+.image-placeholder {
+  background-color: #3b82f6; /* Color azul similar a la imagen proporcionada */
+  border-radius: 10%;
+  height: 150px;
+  width: 100%;
+  margin-top: -12%;
+}
+
+/* Estilos para el contenido de la tarjeta */
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Botón "Read More" */
+.read-more-button {
+  background-color: #3b82f6;
+  color: rgb(107, 28, 28);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #2563eb;
+}
+
+
+/* Para pantallas medianas, como tablets (768px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-container {
+    flex-direction: row; /* Mantén los componentes en fila */
+    flex-wrap: wrap; /* Si no caben en una fila, saltan a la siguiente */
+
+  }
+
+  .card, .newsletter-container, .HOVERS {
+    width: auto; /* Los componentes ocupan el 45% del ancho en pantallas medianas */
+    height: auto;
+  }
+}
+
+/* Para pantallas grandes, como ordenadores de escritorio (más de 1024px) */
+@media (min-width: 1025px) {
+  .main-container {
+    flex-direction: row; /* Mantén los componentes en una fila horizontal */
+    justify-content: space-around;
+
+  }
+
+  .card, .newsletter-container, .HOVERS {
+    width: auto; /* Los componentes tienen su tamaño por defecto */
+  }
+}
